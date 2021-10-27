@@ -1,9 +1,10 @@
-FROM docker.io/centos:7.4.1708
+FROM docker.io/library/centos:7.4.1708
 MAINTAINER scerveau
 LABEL Version 0.1
 ARG USER_NAME=scerveau
+ARG DOCKER_BIN=scerveau
 
-ENV container docker
+ENV container $DOCKER_BIN
 
 # NOTE: Systemd needs /sys/fs/cgroup directoriy to be mounted from host in
 # read-only mode. (Required).
