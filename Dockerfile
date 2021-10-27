@@ -49,5 +49,5 @@ WORKDIR /home/$USER_NAME
 
 RUN chmod +w /opt && chown -R $USER_NAME:$USER_NAME /opt
 
-
+CMD /bin/sh
 
