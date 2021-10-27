@@ -6,6 +6,14 @@ ARG DOCKER_BIN=scerveau
 
 ENV container $DOCKER_BIN
 
+ENV NAME=petalinux-centos-toolbox VERSION=7
+LABEL com.github.containers.toolbox="true" \
+      com.github.debarshiray.toolbox="true" \
+      name="$NAME" \
+      version="$VERSION" \
+      usage="This image is meant to be used with the toolbox command" \
+      summary="Base image for creating Centos toolbox containers"
+
 # NOTE: Systemd needs /sys/fs/cgroup directoriy to be mounted from host in
 # read-only mode. (Required).
 # VOLUME [ "/sys/fs/cgroup" ]
